@@ -1,0 +1,19 @@
+Template support link:
+https://demo.w3layouts.com/demos_new/18-02-2017/flatty_weather_report-demo_Free/1390810139/web/index.html#
+
+Cross browser
+https://stackoverflow.com/questions/51706882/create-react-app-how-do-i-npm-start-with-a-specific-browser
+
+npm install --save cross-env
+"start": "cross-env BROWSER=chrome react-scripts start"
+
+Icon for react
+https://najens.github.io/weather-icons-react/
+
+Redux
+https://react-redux.js.org/introduction/quick-start
+npm install react-redux --save
+npm install redux --save
+
+API
+npm install axios --save
