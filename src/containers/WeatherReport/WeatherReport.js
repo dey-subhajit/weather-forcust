@@ -29,7 +29,7 @@ class WeatherReport extends Component{
         if(this.props.IPSetup !== null) {
             this.setState({ShowLoader: true});
             this.props.onChangeGlobalWeatherReport({'temp_c': null});
-            await axios.get('https://api.weatherapi.com/v1/current.json?key=e313ed0034064b40ac1134635200411&q='+this.props.IPSetup,{
+            await axios.get('https://api.weatherapi.com/v1/current.json?key=0062baeabb03462694563754221103&q='+this.props.IPSetup,{
                 headers: {
                     "Access-Control-Allow-Origin": "*",
                 }
@@ -52,7 +52,7 @@ class WeatherReport extends Component{
             })
 
             // axios.get('https://api.weatherapi.com/v1/forecast.json?key=06830f34f6714e62a6191013202510&q='+state.ip+'&dt=2020-11-1')
-            await axios.get('https://api.weatherapi.com/v1/forecast.json?key=e313ed0034064b40ac1134635200411&q='+this.props.IPSetup+'&days=5')
+            await axios.get('https://api.weatherapi.com/v1/forecast.json?key=0062baeabb03462694563754221103&q='+this.props.IPSetup+'&days=5')
             .then(resp => {
                 // console.log('4 days api', resp);
                 this.props.onChangeGlobalNextDayWeatherReport({
@@ -75,7 +75,7 @@ class WeatherReport extends Component{
             this.props.onChangeGlobalWeatherReport({'temp_c': null});
             const GetLatitute = this.props.GeoLocationSetup.Latitude;
             const GetLongitute = this.props.GeoLocationSetup.Longitude;
-            await axios.get('https://api.weatherapi.com/v1/current.json?key=e313ed0034064b40ac1134635200411&q='+this.props.GeoLocationSetup.Latitude+','+this.props.GeoLocationSetup.Longitude)
+            await axios.get('https://api.weatherapi.com/v1/current.json?key=0062baeabb03462694563754221103&q='+this.props.GeoLocationSetup.Latitude+','+this.props.GeoLocationSetup.Longitude)
             .then(resp => {
                 this.setState({ShowLoader: false});
                 this.props.onChangeGlobalWeatherReport({
@@ -94,7 +94,7 @@ class WeatherReport extends Component{
             })
             
             // axios.get('https://api.weatherapi.com/v1/forecast.json?key=06830f34f6714e62a6191013202510&q='+state.ip+'&dt=2020-11-1')
-            await axios.get('https://api.weatherapi.com/v1/forecast.json?key=e313ed0034064b40ac1134635200411&q='+GetLatitute+','+GetLongitute+'&days=4')
+            await axios.get('https://api.weatherapi.com/v1/forecast.json?key=0062baeabb03462694563754221103&q='+GetLatitute+','+GetLongitute+'&days=4')
             .then(resp => {
                 // console.log(resp);
                 this.props.onChangeGlobalNextDayWeatherReport({
